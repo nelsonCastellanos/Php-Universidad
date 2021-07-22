@@ -1,0 +1,429 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* { box-sizing:border-box; }
+
+
+header{
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--mdc-theme-primary, #212121);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 4;
+    height: 72px;
+    transform: translateY(0);
+    transition: transform 300ms 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 0ms 300ms, background-color 150ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+
+.mobile-side-button{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    width: 72px;
+    height: 72px;
+    border: 0;
+    background: 0 0;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.brand{
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: inherit; 
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #212121;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+    height: 72px;
+    margin-right: auto;
+    padding-left: 24px;
+    -webkit-font-smoothing: auto;
+    text-decoration: none;
+}
+
+.brand_logo{
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    text-transform: inherit;
+    font-size: 1rem;
+    color: #212121;
+    letter-spacing: 0;
+    -webkit-font-smoothing: auto;
+    box-sizing: border-box;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    background: url('assets/logos/UniversidadManuelaBeltran.png') 100% 50%/auto 100% no-repeat;
+}
+
+.brand__title{
+    letter-spacing: 0;
+    -webkit-font-smoothing: auto;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    display: inline;
+    color: #fff;
+}
+
+
+.nav{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight:400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+
+
+.nav-list{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    list-style: none;
+    box-sizing: border-box;
+    transform: translateZ(0);
+    text-align: center;
+    display: inline-block;
+}
+
+.nav-link{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    text-transform: inherit;
+    font-size: 1rem;
+    list-style: none;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 0;
+    display: inline-block;
+    position: relative;
+    transition: color 100ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0 16px;
+    line-height: 72px;
+    color: #fff;
+}
+
+.search-button{
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: 0;
+    background: 0 0;
+    font-family: inherit;
+    line-height: 0;
+    cursor: pointer;
+    z-index: 5;
+    margin-left: 24px;
+}
+
+.icons-container{
+    -webkit-font-smoothing: antialiased;
+    font-family: inherit;
+    line-height: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    --mdc-ripple-fg-translate-end: 0;
+    --mdc-ripple-fg-translate-start: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    will-change: transform,opacity;
+    outline: none;
+    --mdc-ripple-fg-opacity: 0.12;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    --mdc-ripple-fg-size: 14px;
+    --mdc-ripple-fg-scale: 1.71429;
+    --mdc-ripple-left: 5px;
+    --mdc-ripple-top: 5px;
+}
+
+.spyglass{
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 200ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-close{
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    transform: rotate(-90deg) scale(0.5);
+    transform-origin: center;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform 200ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.body-container{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+.content-container{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 72px;
+}
+
+main{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    -webkit-font-smoothing: antialiased;
+    font-family:Roboto,sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.about{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    flex-wrap: nowrap;
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-top: 48px;
+}
+.logo{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    text-transform: inherit;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    color: #212121;
+    letter-spacing: 0;
+    text-decoration: underline;
+    margin-right: 32px;
+    margin-bottom: 0;
+}
+
+.ecommerce-logo{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    text-transform: inherit;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #212121;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    background: url('assets/logos/UniversidadManuelaBeltran.png');
+}
+
+ul{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.legal{
+    -webkit-font-smoothing: antialiased;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: inherit;
+    color: #424242;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    flex-wrap: nowrap;
+    padding: 32px 0;
+}
+
+
+
+
+.grid-container {
+display: grid;
+grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+grid-gap: 10px;
+background-color: #2196F3;
+padding: 10px;
+}
+
+.grid-container > div {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
+
+
+p{
+    font: 400 16px/24px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    -webkit-box-direction: normal;
+    box-sizing: inherit;
+    margin: 16px 0;
+    padding: 0;
+}
